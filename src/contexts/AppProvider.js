@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// import { StorageProvider } from "./StorageContext";
+import { DarkModeProvider } from "./DarkModeContext";
 // import { useItemData } from "../hooks/useItemData";
 
 const AppProvider = ({ children }) => {
   // const items = useItemData();
 
   return (
-    // <StorageProvider items={items}>
-      children
-    // </StorageProvider>
+    <DarkModeProvider>
+      {children}
+    </DarkModeProvider>
   );
 };
 
