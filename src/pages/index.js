@@ -1,13 +1,22 @@
 import React from "react"
+
+import SEO from "../layouts/SEO"
+import MainPanel from "../components/MainPanel"
+
 import { useDarkMode } from "../contexts/DarkModeContext"
 
 const IndexPage = () => {
   const darkMode = useDarkMode()
 
   return (
-    <div onClick={darkMode.toggle}>
-      hello, world
-    </div>
+    <>
+      <SEO title="Paper Notes" />
+      <MainPanel>
+        <div onClick={darkMode.toggle}>
+          hello, world
+        </div>
+      </MainPanel>
+    </>
   )
 }
 
