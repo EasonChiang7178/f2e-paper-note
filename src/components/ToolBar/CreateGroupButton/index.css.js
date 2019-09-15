@@ -22,6 +22,10 @@ export const Button = styled.button`
   &:active {
     outline: none;
   }
+
+  i {
+    margin-left: 2px;
+  }
 `;
 
 export const FolderIcon = styled(FolderSvgIcon)`

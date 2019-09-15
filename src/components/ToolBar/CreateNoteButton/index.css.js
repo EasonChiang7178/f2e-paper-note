@@ -21,17 +21,21 @@ export const Button = styled.button`
   &:focus, &:active {
     outline: none;
   }
+
+  i {
+    margin-left: 2px;
+  }
 `
 
-export const TrashIcon = styled(TrashSvgIcon)`
+export const TrashIcon = styled((({ darkMode, ...rest }) => <TrashSvgIcon {...rest} />))`
   position: relative;
   bottom: 3px;
 
-  path:first-of-type {
-    fill: ${props => props.color};
-  }
+  path:first-of-type,
   path:last-of-type {
-    fill: ${props => props.color};
+    ${props => props.darkMode && {
+      fill: "#8a7144"
+    }}
   }
 `
 

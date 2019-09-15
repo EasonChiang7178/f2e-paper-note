@@ -1,8 +1,19 @@
 import React from "react"
+import styled from "styled-components"
 
 import SEO from "../layouts/SEO"
-import MainPanel from "../components/MainPanel"
-import ToolBar from "../components/ToolBar"
+import MainPanelRaw from "../components/MainPanel"
+import ToolBarRaw from "../components/ToolBar"
+import OnBoardingMessageRaw from "../components/MainPanel/OnBoardingMessage"
+
+const MainPanel = styled(MainPanelRaw)`
+  display: flex;
+  flex-direction: column;
+`
+const ToolBar = styled(ToolBarRaw)``
+const OnBoardingMessage = styled(OnBoardingMessageRaw)`
+  height: 100%;
+`
 
 const IndexPage = () => {
   return (
@@ -11,6 +22,7 @@ const IndexPage = () => {
 
       <MainPanel>
         <ToolBar />
+        <OnBoardingMessage />
       </MainPanel>
     </>
   )
