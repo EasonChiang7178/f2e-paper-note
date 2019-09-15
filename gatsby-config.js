@@ -22,7 +22,7 @@ module.exports = {
         name: `paper-note`,
         short_name: `note`,
         start_url: `/`,
-        background_color: `#000000`,
+        background_color: `#d6d6d6`,
         theme_color: `#C3C3BB`,
         display: `minimal-ui`,
         icon: `src/images/paper-note-icon.png`,
