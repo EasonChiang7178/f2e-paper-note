@@ -4,6 +4,7 @@ import useDarkModeHook from "use-dark-mode";
 import { THEME } from "../constants/index"
 
 const defaultContextValue = {
+  isDarkMode: false,
   theme: THEME.LIGHT,
   toggle: () => {}
 };
@@ -17,6 +18,7 @@ const DarkModeProvider = ({ children }) => {
   return (
     <Context.Provider
       value={{
+        isDarkMode: darkMode.value,
         theme: darkMode.value ? THEME.DARK : THEME.LIGHT,
         toggle: darkMode.toggle
       }}
